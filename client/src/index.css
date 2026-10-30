@@ -1,0 +1,66 @@
+:root {
+  --font: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --bg: #ebebe8;
+  --panel: #ffffff;
+  --ink: #101113;
+  --muted: #8a8c93;
+  --line: #efefec;
+  --pill: #17181b;
+  --pilltext: #ffffff;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #08080a;
+  --panel: #131315;
+  --ink: #f3f3f5;
+  --muted: #8d8f98;
+  --line: #222226;
+  --pill: #f3f3f5;
+  --pilltext: #101113;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+h1, h2, h3 { font-weight: 500; letter-spacing: -0.04em; }
+h1 { letter-spacing: -0.045em; }
+
+
+.dark-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #07070a;
+  color: #fff;
+  border-radius: 22px;
+  padding: 28px;
+}
+.dark-card > *:not(.waves) { position: relative; z-index: 1; }
+
+.waves { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+.waves path {
+  mix-blend-mode: screen;
+  animation: drift 14s ease-in-out infinite alternate;
+}
+.waves path:nth-child(2) { animation-duration: 18s; animation-direction: alternate-reverse; }
+.waves path:nth-child(3) { animation-duration: 22s; }
+.waves path:nth-child(4) { animation-duration: 16s; animation-direction: alternate-reverse; }
+
+@keyframes drift {
+  from { transform: translate(-5%, -3%); }
+  to   { transform: translate(5%, 4%); }
+}
+@media (prefers-reduced-motion: reduce) { .waves path { animation: none; } }
