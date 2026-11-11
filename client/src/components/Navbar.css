@@ -1,0 +1,102 @@
+    .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1100px, calc(100% - 24px));
+    margin: 12px auto;
+    padding: 10px 20px;
+    border-radius: 18px;
+    position: sticky;
+    top: 12px;
+    z-index: 100;
+    background: var(--panel);
+    }
+
+    .logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    text-decoration: none;
+    }
+
+    .logo-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    flex-shrink: 0;
+    background: conic-gradient(from 200deg, #7b6cff, #38d9f5, #ffb07c, #c6f06f, #7b6cff);
+    }
+
+    .nav-links {
+    display: flex;
+    gap: 6px;
+    }
+
+    .nav-links a {
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 99px;
+    font-size: 14px;
+    color: var(--muted);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+    color: var(--ink);
+    background-color: var(--bg);
+    }
+
+    .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    }
+
+    .signin-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 99px;
+    color: var(--ink);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .signin-link:hover{
+    color: var(--ink);
+    background-color: var(--bg);
+    }
+
+    .cta {
+    padding: 9px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    background: var(--pill);
+    color: var(--pilltext);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    cursor: pointer;
+    }
+
+    .cta:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .theme-toggle {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 16px;
+    cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+    color: var(--ink);
+    }

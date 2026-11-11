@@ -1,0 +1,210 @@
+    .signup-page {
+    max-width: 1136px;
+    margin: 12px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    }
+
+    /* Left visual panel */
+    .signup-visual {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    border-radius: 24px;
+    }
+
+    .glass-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    }
+
+    .glass-small {
+    font-size: 13px;
+    opacity: 0.8;
+    margin: 0 0 4px;
+    }
+
+    .glass-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    }
+
+    .glass-pill {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    }
+
+    /* Right form card */
+    .signup-card {
+    background: var(--panel);
+    color: var(--ink);
+    border-radius: 24px;
+    padding: 40px 46px;
+    }
+
+    .signup-card h1 {
+    font-size: 40px;
+    line-height: 1.05;
+    margin: 40px 0 16px;
+    }
+
+    .signup-card h1 span {
+    display: block;
+    color: var(--muted);
+    }
+
+    .subtext {
+    color: var(--muted);
+    margin-bottom: 24px;
+    }
+
+    .role-toggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--bg);
+    border-radius: 999px;
+    padding: 5px;
+    margin-bottom: 24px;
+    }
+
+    .role-toggle button {
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    padding: 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    }
+
+    .role-toggle button.active {
+    background: var(--panel);
+    color: var(--ink);
+    }
+
+    .fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    }
+
+    .col-full {
+    grid-column: span 2;
+    }
+
+    .signup-card .input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    }
+
+    .signup-card .input-group input {
+    width: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .signup-card .input-group input:focus {
+    outline: none;
+    border-color: rgba(123, 108, 255, 0.7);
+    box-shadow: 0 0 0 3px rgba(123, 108, 255, 0.15);
+    }
+
+    .signup-card .input-group.has-error input {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.12);
+    }
+
+    .field-error {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 8px 0 0 4px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--danger);
+    }
+
+    .field-error::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--danger);
+    flex-shrink: 0;
+    }
+
+    .form-error {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    color: var(--danger);
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-size: 14px;
+    margin-bottom: 14px;
+    }
+
+    .terms {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 18px 0 8px;
+    }
+
+    .terms input {
+    accent-color: #7b6cff;
+    margin-right: 8px;
+    }
+
+    .signup-card .btn.primary {
+    width: 100%;
+    background: var(--pill);
+    color: var(--pilltext);
+    border: none;
+    border-radius: 999px;
+    padding: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+    }
+
+    .signup-card .btn.primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    }
+
+    .switch {
+        text-align: start;
+        font-size: 13px;
+    color: var(--muted);
+    margin-top: 14px;
+    }
+
+    .switch a {
+    color: var(--ink);
+    font-weight: 600;
+    }

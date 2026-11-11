@@ -1,0 +1,86 @@
+.search-container{
+    width: min(1100px, calc(100% - 24px));
+    margin: 12px auto;
+    background-color: var(--panel);
+    padding: 28px 32px;
+    border-radius: 20px;
+}
+
+.search-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.search-text h3{ 
+    font-size: 20px; 
+    font-weight: 600; 
+    color: var(--ink); 
+}
+
+.search-text span { 
+    font-size: 14px; 
+    color: var(--muted); 
+}
+
+.browse-search {
+    width: min(540px, 100%);
+    margin: 0 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 3px 8px 3px 24px;
+    background: var(--bg);
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.browse-search:focus-within {
+    border-color: rgba(123, 108, 255, 0.7);
+    box-shadow: 0 0 0 3px rgba(123, 108, 255, 0.15);
+}
+
+.browse-search input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: var(--ink);
+}
+
+.browse-search input::placeholder { color: var(--muted); }
+
+.browse-search button {
+    padding: 8px 24px;
+    border-radius: 999px;
+    border: none;
+    background: var(--pill);
+    color: var(--pilltext);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s ease;
+}
+
+.browse-search button:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.projectCard-grid {
+    width: min(1100px, calc(100% - 24px));
+    margin: 12px auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px; 
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--muted);
+    padding: 48px 0;
+}

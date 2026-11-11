@@ -1,0 +1,95 @@
+    .notfound-page {
+    width: var(--page-width);
+    min-height: calc(100vh - 88px);
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    padding: 32px 0;
+    }
+
+    .notfound-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: min(100%, 620px);
+    padding: clamp(32px, 7vw, 64px);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    background: var(--panel);
+    color: var(--ink);
+    text-align: center;
+    box-shadow: 0 24px 70px rgba(16, 17, 19, 0.06);
+    }
+
+    .notfound-card::before {
+    position: absolute;
+    z-index: -1;
+    top: -110px;
+    left: 50%;
+    width: 260px;
+    height: 220px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 200deg,
+        #7b6cff,
+        #38d9f5,
+        #ffb07c,
+        #c6f06f,
+        #7b6cff
+    );
+    content: "";
+    opacity: 0.12;
+    filter: blur(55px);
+    transform: translateX(-50%);
+    }
+
+    .notfound-code {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    margin-bottom: 20px;
+    padding: 4px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    }
+
+    .notfound-card h1 {
+    max-width: 13ch;
+    margin: 0 auto 14px;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.08;
+    }
+
+    .notfound-text {
+    max-width: 42ch;
+    margin: 0 auto 28px;
+    color: var(--muted);
+    }
+
+    .notfound-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 20px;
+    border-radius: 999px;
+    background: var(--pill);
+    color: var(--pilltext);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .notfound-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .notfound-link:focus-visible {
+    outline: 2px solid #7b6cff;
+    outline-offset: 4px;
+    }
